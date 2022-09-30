@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * main -> Program that takes in all integer arguments and returns the sum
- * @argc: Argc parameter
- * @argv: An array of a command listed
+ * main -> this is a function to print its name
+ * @argc: argc parameter
+ * @argv: an array of a command listed
  * Return: 0 for success
  */
 int main(int argc, char *argv[])
