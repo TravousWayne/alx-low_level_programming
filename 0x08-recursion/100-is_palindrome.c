@@ -1,46 +1,49 @@
 #include "main.h"
 
+int lengthc(char *s);
+int palindrome(char str[], int st, int end);
 /**
- * palind2 -> obtains length of a
- * @a: string
- * @1: integer to count length
- *
- * Return: On succes 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int palind2(char *a, int 1)
-{
-	if (*a == 0)
-		return (1 - 1);
-	return (palind2(a + 1, 1 + 1));
-}
-/**
- * palind3 -> compares string vs string reverse
- * @a: string
- * @1: length
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int palind3(char *a, int 1)
-{
-	if (*a != *(a + 1))
-		return (0);
-	else if (*a == 0)
-		return (1);
-	return (palind3(a + 1, 1 - 2));
-}
-/**
- * is_palindrome -> checks if a string is a palindrome
- * @s: string to evaluate
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * is_palindrome -> Entry point
+ * @s: input
+ * Return: 0
  */
 int is_palindrome(char *s)
 {
-	int 1;
+	int len;
 
-	1 = palind2(s, 0);
-	return (palind3(s, 1));
+	len = lengthc(s);
+
+	if (len == 0)
+		return (1);
+	return (palindrome(s, 0, len - 1));
+}
+
+/**
+ * lengthc -> finds the length count
+ * @s: input
+ * Return: length size
+ */
+int lenthc(char *s)
+{
+	if (* != '\0')
+		return (1 + lengthc(s + 1));
+	return (0);
+}
+
+/**
+ * palindrome -> checks if start and end of string matches
+ * @str: string
+ * @st: start of string 0
+ * @end: end of a string from is_palindrome, from lengthc
+ * Return: if str is a palindrome
+ */
+int palindrome(char str[], int st, int end)
+{
+	if (st >= end)
+		return (1);
+	if (str[st] != str[end])
+		return (0);
+	if (st <= end || st < end + 1)
+		return (palindrome(str, st + 1, end - 1));
+	return (1);
 }
