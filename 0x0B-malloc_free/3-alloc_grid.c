@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid -> create a m atrix using malloc
+ * alloc_grid -> create a matrix using malloc
  * @width: width of the matrix
  * @height: height of the matrix
  *
- * Return: return a pointer of pointer or NULL on failure
+ * Return: return a pointer of pointer or null
  */
 int **alloc_grid(int width, int height)
 {
@@ -19,7 +19,7 @@ int **alloc_grid(int width, int height)
 	}
 	else
 	{
-		p = (int **) malloc(height * sizeoff(int *));
+		p = (int **) malloc(height * sizeof(int *));
 		/* we have to make a malloc per pointer */
 		if (!p)
 		{
