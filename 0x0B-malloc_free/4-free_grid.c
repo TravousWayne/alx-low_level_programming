@@ -3,7 +3,7 @@
 
 /**
  * free_grid -> frees a 2D grid created in alloc_grid.
- * @grid: An input 2D array of integers to free.
+ * @grid: pointer to pointer.
  * @height: height of grid.
  *
  * Return: void.
