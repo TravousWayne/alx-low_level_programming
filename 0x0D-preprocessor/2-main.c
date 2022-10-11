@@ -1,7 +1,7 @@
 #include <stdlib.h>
-#include <stdo.h>
+#include <stdio.h>
 /**
- * main -> function that prints name of file.
+ * main -> a function that prints name of file.
  *
  * Return: 0.
  */
